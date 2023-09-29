@@ -26,6 +26,11 @@ const routes: Routes = [
     loadChildren: () => import('./modules/general/signup/signup.module')
       .then(mod => mod.SignupModule)
   },
+  {
+    path: 'bootstrap',
+    loadChildren: () => import('./modules/application/example-bootstrap/tutorial.module')
+      .then(mod => mod.TutorialModule)
+  },
   { path: '**', component: NotFoundComponent }
 ];
 
